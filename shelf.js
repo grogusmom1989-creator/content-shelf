@@ -1,0 +1,181 @@
+const projects = [
+  {
+    id: "kikiverse",
+    title: "Kikiverse",
+    kind: "site",
+    description: "A colorful world of little web experiences, gathered in one place.",
+    tags: ["world", "web"],
+    links: [
+      { label: "Visit the site", url: "https://grogusmom1989-creator.github.io/kikiverse/" },
+      { label: "Source", url: "https://github.com/grogusmom1989-creator/kikiverse" }
+    ]
+  },
+  {
+    id: "healing-art-studio",
+    title: "Healing Art Studio",
+    kind: "art",
+    description: "A creative corner from the Kikiverse collection.",
+    tags: ["art", "kikiverse"],
+    links: [
+      { label: "Open the studio", url: "https://grogusmom1989-creator.github.io/kikiverse/healing-art-studio.html" },
+      { label: "Source", url: "https://github.com/grogusmom1989-creator/kikiverse" }
+    ]
+  },
+  {
+    id: "dazzly-fan-edition",
+    title: "Dazzly Fan Edition",
+    kind: "art",
+    description: "A bright fan-made experience, also part of Kikiverse.",
+    tags: ["fan-made", "kikiverse"],
+    links: [
+      { label: "Open Dazzly", url: "https://grogusmom1989-creator.github.io/kikiverse/dazzly-fan-edition.html" },
+      { label: "Source", url: "https://github.com/grogusmom1989-creator/kikiverse" }
+    ]
+  },
+  {
+    id: "grogu-brick",
+    title: "Grogu Brick",
+    kind: "project",
+    description: "A Grogu-inspired project in the making.",
+    tags: ["Grogu", "experiment"],
+    links: [
+      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Grogu-brick" }
+    ]
+  },
+  {
+    id: "tigger",
+    title: "Tigger",
+    kind: "project",
+    description: "An earlier Tigger project, kept here as part of the bigger picture.",
+    tags: ["Tigger", "archive"],
+    links: [
+      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Tigger" }
+    ]
+  },
+  {
+    id: "tigger-2",
+    title: "Tigger 2.0",
+    kind: "project",
+    description: "A second take in the Tigger family of projects.",
+    tags: ["Tigger", "iteration"],
+    links: [
+      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Tigger-2.0" }
+    ]
+  },
+  {
+    id: "cookies",
+    title: "Cookies",
+    kind: "art",
+    description: "More playful experiments and creative pieces to explore.",
+    tags: ["play", "remix"],
+    links: [
+      { label: "Explore the collection", url: "https://github.com/grogusmom1989-creator/Cookies" }
+    ]
+  },
+  {
+    id: "kikis-world",
+    title: "Kiki's World 2.0",
+    kind: "project",
+    description: "A newer world in the collection, growing alongside the rest.",
+    tags: ["world", "iteration"],
+    links: [
+      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Kikis-world-2.0" }
+    ]
+  },
+  {
+    id: "liam-panda-payne",
+    title: "Liam Panda Payne",
+    kind: "art",
+    description: "A panda-themed creation in the mix.",
+    tags: ["panda", "character"],
+    links: [
+      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/liam-panda-payne" }
+    ]
+  }
+];
+
+const grid = document.querySelector("#shelf-grid");
+const search = document.querySelector("#search");
+const count = document.querySelector("#result-count");
+const emptyState = document.querySelector("#empty-state");
+const copyStatus = document.querySelector("#copy-status");
+const filters = [...document.querySelectorAll(".filter")];
+let activeFilter = "all";
+
+function makeElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (text) element.textContent = text;
+  return element;
+}
+
+function renderCard(project) {
+  const card = makeElement("article", "card");
+  card.id = project.id;
+  card.dataset.kind = project.kind;
+
+  const topline = makeElement("div", "card-topline");
+  topline.append(
+    makeElement("span", "card-kind", project.kind === "art" ? "Art & play" : project.kind),
+    makeElement("span", "card-mark", "✳")
+  );
+  card.append(topline);
+  card.append(makeElement("h3", "", project.title));
+  card.append(makeElement("p", "", project.description));
+
+  const tags = makeElement("div", "card-tags");
+  for (const tag of project.tags) tags.append(makeElement("span", "card-tag", tag));
+  card.append(tags);
+
+  const bottom = makeElement("div", "card-bottom");
+  const links = makeElement("div", "card-links");
+  for (const item of project.links) {
+    const link = makeElement("a", "", item.label);
+    link.href = item.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    links.append(link);
+  }
+  const share = makeElement("button", "card-share", "Copy card link ↗");
+  share.type = "button";
+  share.addEventListener("click", async () => {
+    const url = `${window.location.origin}${window.location.pathname}#${project.id}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      copyStatus.textContent = `Copied a link to ${project.title}.`;
+    } catch (error) {
+      copyStatus.textContent = "Copy isn't available here. Copy this page's address and add #" + project.id;
+    }
+  });
+  bottom.append(links, share);
+  card.append(bottom);
+  return card;
+}
+
+function render() {
+  const query = search.value.trim().toLocaleLowerCase();
+  const visible = projects.filter((project) => {
+    const matchesKind = activeFilter === "all" || project.kind === activeFilter;
+    const searchable = [project.title, project.description, ...project.tags].join(" ").toLocaleLowerCase();
+    return matchesKind && searchable.includes(query);
+  });
+
+  grid.replaceChildren(...visible.map(renderCard));
+  count.textContent = `${visible.length} ${visible.length === 1 ? "piece" : "pieces"} in view`;
+  emptyState.hidden = visible.length > 0;
+}
+
+for (const filter of filters) {
+  filter.addEventListener("click", () => {
+    activeFilter = filter.dataset.filter;
+    for (const button of filters) {
+      const selected = button === filter;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    }
+    render();
+  });
+}
+
+search.addEventListener("input", render);
+render();

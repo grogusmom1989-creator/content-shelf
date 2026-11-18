@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5ead7">
+    <meta name="description" content="A colorful little index of projects, art, experiments, and things to watch.">
+    <title>Everything, in one place</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="shelf.js" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="wordmark" href="#" aria-label="Everything shelf home">everything<span>✳</span></a>
+      <span class="masthead-note">a living, linking, growing collection</span>
+      <a class="top-link" href="#the-shelf">Explore the shelf <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="sparkle" aria-hidden="true">✳</span> made of many little worlds</p>
+          <h1 id="page-title">Everything<br><em>belongs together.</em></h1>
+          <p class="intro-text">I started with nothing and just started building in Meta Muse. Then came Copilot and all kinds of AI tools, becoming part of the process. This is a shared home for the things I make, collect, remix, and want to pass along&mdash;each piece keeps its original home, and this is the thread that ties them together.</p>
+          <a class="button-link" href="#the-shelf">Wander through <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="collage" aria-label="A playful collage of shapes and artwork">
+          <div class="collage-orbit"></div>
+          <div class="collage-sun">✳</div>
+          <div class="collage-note note-one">little worlds<br>big feelings</div>
+          <div class="collage-note note-two">made with<br>curiosity ♡</div>
+          <div class="collage-flower">✿</div>
+          <div class="collage-sticker">ALL<br>THE<br>THINGS</div>
+        </div>
+      </section>
+
+      <section class="shelf-section" id="the-shelf" aria-labelledby="shelf-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">the collection</p>
+            <h2 id="shelf-title">Pick a thread <span aria-hidden="true">↘</span></h2>
+          </div>
+          <p class="section-note">The original projects stay right where they are.<br>This shelf just brings them into the same room.</p>
+        </div>
+
+        <div class="shelf-tools">
+          <label class="search-wrap">
+            <span class="visually-hidden">Search the shelf</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Find a little something…" autocomplete="off">
+          </label>
+          <div class="filters" role="group" aria-label="Filter by kind">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Everything</button>
+            <button class="filter" type="button" data-filter="site" aria-pressed="false">Sites</button>
+            <button class="filter" type="button" data-filter="project" aria-pressed="false">Projects</button>
+            <button class="filter" type="button" data-filter="art" aria-pressed="false">Art & play</button>
+          </div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="shelf-grid" id="shelf-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>No matches yet. Try another word or filter.</p>
+      </section>
+
+      <section class="next-section">
+        <div class="next-sticker" aria-hidden="true">NEXT<br>UP?</div>
+        <div>
+          <p class="eyebrow">room to grow</p>
+          <h2>Videos, new work,<br>whatever comes next.</h2>
+          <p>Add a video by giving it a shareable URL and adding it to the collection. Then share its own shelf link wherever you like.</p>
+        </div>
+        <a class="button-link button-light" href="https://github.com/grogusmom1989-creator/content-shelf">See how this shelf is made <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <span>Gathered with care <span aria-hidden="true">✳</span></span>
+      <span>One collection, many doors.</span>
+      <a href="#page-title">Back to the top ↑</a>
+    </footer>
+    <p class="copy-status visually-hidden" id="copy-status" aria-live="polite"></p>
+  </body>
+</html>
