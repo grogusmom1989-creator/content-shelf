@@ -155,18 +155,6 @@
       ]
     },
     {
-      "id": "kikis-world",
-      "title": "Kiki's World 2.0",
-      "kind": "project",
-      "collection": "Kiki's World",
-      "description": "A newer world in the collection, growing alongside the rest.",
-      "tags": ["world", "iteration"],
-      "platforms": [{ "name": "Web" }],
-      "links": [
-        { "label": "Explore the project", "url": "https://github.com/grogusmom1989-creator/Kikis-world-2.0" }
-      ]
-    },
-    {
       "id": "liam-panda-payne",
       "title": "Liam Panda Payne",
       "kind": "art",
