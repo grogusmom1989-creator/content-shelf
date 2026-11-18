@@ -105,6 +105,12 @@ The private inventory's `bridgePolicy` is a planning record. Add a `sources` ent
 
 Public/shareable links from Meta, Microsoft services, Cloudflare-hosted video URLs, Neocities, and other platforms can be added as homes. Visitors still need whatever permissions the original service requires. A domain managed by Cloudflare can also point to GitHub Pages; this project does not change DNS or expose private storage.
 
+## Keep track of news, topics, and case research
+
+The private inventory has a `researchPolicy` section for the news, topics, and cases you look into. Its `sources`, `savedItems`, and `projects` lists start empty because your research sources and subjects have not been identified. Add a research project for a topic or case, then keep a source log with the source title and URL, publisher or court, publication and access dates, and a short note in your own words. Link each note to its source; distinguish allegations, reported claims, official findings, and open questions rather than blending them together. For a changing case, note the date you checked its status and prefer primary records where available. If multiple sources cover the same event, keep one research item and link the corroborating sources instead of making duplicates.
+
+This is a private organizing aid, not a feed reader or legal advice. It does not fetch feeds or scrape pages. Keep sensitive personal details, credentials, and full article text out of it; only add a specific source link to the public shelf if you intend to share it.
+
 ## Publish on GitHub Pages
 
 This repository is a plain static site, so it needs no build step. In the repository's **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save. GitHub Pages will publish `index.html`.
