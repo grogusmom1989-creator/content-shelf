@@ -13,6 +13,23 @@ A small, static home for linking your projects together. It does not copy or mov
 
 The private `Kiki-Library` repository is intentionally not listed on this public site.
 
+## Keep a private master inventory
+
+`inventory.private.json` is a local-only index of canonical pieces, their homes, possible duplicate relationships, build history, and schedule. It is intentionally excluded from Git so private links and notes cannot be published with the shelf. Organize records across four visibility levels:
+
+- `public`: listed in `catalog.json` and visible on the public shelf.
+- `unlisted`: shareable by direct link, but not listed in the public shelf or feed.
+- `private`: private organizing metadata only; never included in the public feed.
+- `muse-only`: vault contents stay exclusively in Meta Muse. At most, the private index holds a minimal reference; never export, upload, mirror, or back up vault files here or to another service.
+
+The inventory starts with the items already on the shelf, marked `public`. Use it as a pointer/status layer, not another vault. Do not put passwords, access tokens, or private account data in either catalog.
+
+For duplicates, keep one canonical record and point copies to it with `duplicateOf` set to that record's `id`. Keep distinct versions or remixes as separate records unless you confirm they are copies. In the public `catalog.json`, list only shareable homes on the canonical card; private inventory notes and private links stay local. `duplicateReview` can be `not-reviewed`, `same-work`, or `distinct-version`.
+
+Use the `builds` and `schedules` lists for metadata only, with the same `visibility` levels. Record a build's version, status, date, and a pointer to its existing artifact home; keep the artifact itself in its existing home. Record schedule dates in ISO 8601 format with a timezone (for example, `2026-12-01T18:00:00-05:00`). These lists start empty because no build artifacts or schedule dates have been provided; Android version metadata on the shelf describes project configuration, not proof that a build was produced.
+
+The private inventory is not synced or backed up by Git. If you choose to back up this metadata, use a location you trust; never include Muse vault contents. Check privacy before sharing the inventory.
+
 ## Add a video or another piece
 
 1. Copy the shareable URL from wherever the video already lives. This shelf links to it; it does not store or upload video files.

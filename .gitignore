@@ -1,0 +1,2 @@
+# Keep the master inventory local; only shareable doors belong in catalog.json.
+inventory.private.json
