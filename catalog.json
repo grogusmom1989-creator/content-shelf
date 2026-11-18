@@ -16,15 +16,28 @@
       ]
     },
     {
+      "id": "kikis-aetheria",
+      "title": "Kiki's Aetheria",
+      "kind": "site",
+      "collection": "Kiki's World",
+      "description": "Kiki's main public world at Storyspire: a collection of rooms, creative work, public Muse spaces, and original doorway pages.",
+      "tags": ["main site", "Aetheria", "Storyspire", "Neocities"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Visit the main site", "url": "https://1dkikiworldhq.neocities.org/" }
+      ]
+    },
+    {
       "id": "kikiverse",
       "title": "Kikiverse",
       "kind": "site",
       "collection": "Kikiverse",
       "description": "A colorful world of little web experiences, gathered in one place.",
-      "tags": ["world", "web"],
+      "tags": ["world", "web", "main site", "GitHub Pages"],
       "platforms": [{ "name": "Web" }],
       "links": [
         { "label": "Visit the site", "url": "https://grogusmom1989-creator.github.io/kikiverse/" },
+        { "label": "Main site", "url": "https://1dkikiworldhq.neocities.org/" },
         { "label": "Source", "url": "https://github.com/grogusmom1989-creator/kikiverse" }
       ]
     },
