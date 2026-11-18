@@ -33,7 +33,7 @@ The private inventory is not synced or backed up by Git. If you choose to back u
 
 ## Queue unfinished build work
 
-Use the private inventory's `workQueue` for work that has not been built yet. Each task should state its project, goal, acceptance criteria, and any source links. Set `status` to `queued`, `in-progress`, `blocked`, or `done`; keep a task blocked if it needs a missing decision, link, or Muse-only action. The scheduled Copilot check can take at most one well-defined GitHub/Copilot task every two hours, independent of Muse credits. It will not invent requirements, access Muse vaults, bypass Muse credits, or publish/commit changes without approval. The queue starts empty, so add concrete tasks before expecting scheduled implementation.
+Use the private inventory's `workQueue` for work that has not been built yet. Each task should state its project, goal, acceptance criteria, and any source links. Set `status` to `queued`, `in-progress`, `blocked`, or `done`; keep a task blocked if it needs a missing decision, link, or Muse-only action. The scheduled Copilot check runs every two hours, records verified public GitHub build/release results in the private inventory, and can take at most one well-defined GitHub/Copilot task per run, independent of Muse credits. It will not invent requirements, access Muse vaults, bypass Muse credits, or publish/commit changes without approval. The queue starts empty, so add concrete tasks before expecting scheduled implementation.
 
 ## Share a Meta Muse space
 
