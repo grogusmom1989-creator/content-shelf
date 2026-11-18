@@ -381,6 +381,23 @@ h1 em {
   flex-wrap: wrap;
 }
 
+.collection-tools {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  flex-wrap: wrap;
+  padding: .8rem 0 .25rem;
+  border-top: 1px solid var(--line);
+}
+
+.collection-label {
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: .68rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 .filter {
   padding: .65rem .8rem;
   border: 1px solid var(--line);
@@ -497,6 +514,17 @@ h1 em {
   margin-bottom: 2.2rem;
 }
 
+.card-collection {
+  max-width: 55%;
+  margin-left: auto;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: .64rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .card-kind {
   color: var(--muted);
   text-transform: uppercase;
@@ -536,9 +564,17 @@ h1 em {
   padding: .3rem .55rem;
   border: 1px solid rgba(40, 37, 31, .22);
   border-radius: 99px;
+  background: transparent;
   color: #625a4f;
+  cursor: pointer;
   font-family: "DM Mono", monospace;
   font-size: .63rem;
+  transition: background .16s ease, color .16s ease;
+}
+
+.card-tag:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .card-bottom {
@@ -792,6 +828,11 @@ footer a {
 
   .filters {
     justify-content: flex-start;
+  }
+
+  .collection-tools {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .shelf-grid {

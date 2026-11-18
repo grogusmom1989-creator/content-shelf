@@ -3,6 +3,7 @@ const projects = [
     id: "kikiverse",
     title: "Kikiverse",
     kind: "site",
+    collection: "Kikiverse",
     description: "A colorful world of little web experiences, gathered in one place.",
     tags: ["world", "web"],
     links: [
@@ -14,6 +15,7 @@ const projects = [
     id: "healing-art-studio",
     title: "Healing Art Studio",
     kind: "art",
+    collection: "Kikiverse",
     description: "A creative corner from the Kikiverse collection.",
     tags: ["art", "kikiverse"],
     links: [
@@ -25,6 +27,7 @@ const projects = [
     id: "dazzly-fan-edition",
     title: "Dazzly Fan Edition",
     kind: "art",
+    collection: "Kikiverse",
     description: "A bright fan-made experience, also part of Kikiverse.",
     tags: ["fan-made", "kikiverse"],
     links: [
@@ -36,6 +39,7 @@ const projects = [
     id: "kiki-uncle-louie-performance",
     title: "Kiki & Uncle Louie Performance",
     kind: "video",
+    collection: "Kikiverse",
     description: "A performance piece already living in the Kikiverse video collection.",
     tags: ["Kikiverse", "performance"],
     links: [
@@ -46,6 +50,7 @@ const projects = [
     id: "cozy-beauty-haul",
     title: "Cozy Beauty Haul",
     kind: "video",
+    collection: "Kikiverse",
     description: "A cozy Sunday beauty haul from the Kikiverse collection.",
     tags: ["Kikiverse", "beauty", "Sunday"],
     links: [
@@ -56,6 +61,7 @@ const projects = [
     id: "burnin-up-remix",
     title: "Burnin' Up Remix",
     kind: "video",
+    collection: "Kikiverse",
     description: "A remix clip already hosted with the other Kikiverse videos.",
     tags: ["Kikiverse", "remix"],
     links: [
@@ -66,6 +72,7 @@ const projects = [
     id: "plush-crew-blooper-reel",
     title: "Plush Crew Blooper Reel",
     kind: "video",
+    collection: "Kikiverse",
     description: "A blooper reel from the existing Kikiverse video archive.",
     tags: ["Kikiverse", "bloopers"],
     links: [
@@ -76,6 +83,7 @@ const projects = [
     id: "kikiverse-video-archive",
     title: "The Kikiverse Video Attic",
     kind: "video",
+    collection: "Kikiverse",
     description: "The original public asset folder holds 79 clips; browse the rest where they already live.",
     tags: ["Kikiverse", "archive", "79 clips"],
     links: [
@@ -86,6 +94,7 @@ const projects = [
     id: "grogu-brick",
     title: "Grogu Brick",
     kind: "project",
+    collection: "Grogu",
     description: "A Grogu-inspired project in the making.",
     tags: ["Grogu", "experiment"],
     links: [
@@ -96,6 +105,7 @@ const projects = [
     id: "tigger",
     title: "Tigger",
     kind: "project",
+    collection: "Tigger",
     description: "An earlier Tigger project, kept here as part of the bigger picture.",
     tags: ["Tigger", "archive"],
     links: [
@@ -106,6 +116,7 @@ const projects = [
     id: "tigger-2",
     title: "Tigger 2.0",
     kind: "project",
+    collection: "Tigger",
     description: "A second take in the Tigger family of projects.",
     tags: ["Tigger", "iteration"],
     links: [
@@ -116,6 +127,7 @@ const projects = [
     id: "cookies",
     title: "Cookies",
     kind: "art",
+    collection: "Art & play",
     description: "More playful experiments and creative pieces to explore.",
     tags: ["play", "remix"],
     links: [
@@ -126,6 +138,7 @@ const projects = [
     id: "kikis-world",
     title: "Kiki's World 2.0",
     kind: "project",
+    collection: "Kiki's World",
     description: "A newer world in the collection, growing alongside the rest.",
     tags: ["world", "iteration"],
     links: [
@@ -136,6 +149,7 @@ const projects = [
     id: "liam-panda-payne",
     title: "Liam Panda Payne",
     kind: "art",
+    collection: "Art & play",
     description: "A panda-themed creation in the mix.",
     tags: ["panda", "character"],
     links: [
@@ -150,7 +164,9 @@ const count = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
 const copyStatus = document.querySelector("#copy-status");
 const filters = [...document.querySelectorAll(".filter")];
+const collectionFilters = document.querySelector("#collection-filters");
 let activeFilter = "all";
+let activeCollection = "all";
 
 function makeElement(tag, className, text) {
   const element = document.createElement(tag);
@@ -168,6 +184,7 @@ function renderCard(project) {
   const kindLabels = { art: "Art & play", site: "Site", video: "Video" };
   topline.append(
     makeElement("span", "card-kind", kindLabels[project.kind] || "Project"),
+    makeElement("span", "card-collection", project.collection),
     makeElement("span", "card-mark", project.kind === "video" ? "▶" : "✳")
   );
   card.append(topline);
@@ -175,7 +192,19 @@ function renderCard(project) {
   card.append(makeElement("p", "", project.description));
 
   const tags = makeElement("div", "card-tags");
-  for (const tag of project.tags) tags.append(makeElement("span", "card-tag", tag));
+  for (const tag of project.tags) {
+    const tagButton = makeElement("button", "card-tag", tag);
+    tagButton.type = "button";
+    tagButton.addEventListener("click", () => {
+      search.value = tag;
+      activeFilter = "all";
+      activeCollection = "all";
+      syncFilters();
+      render();
+      search.focus();
+    });
+    tags.append(tagButton);
+  }
   card.append(tags);
 
   const bottom = makeElement("div", "card-bottom");
@@ -218,8 +247,9 @@ function render() {
   const query = search.value.trim().toLocaleLowerCase();
   const visible = projects.filter((project) => {
     const matchesKind = activeFilter === "all" || project.kind === activeFilter;
-    const searchable = [project.title, project.description, ...project.tags].join(" ").toLocaleLowerCase();
-    return matchesKind && searchable.includes(query);
+    const matchesCollection = activeCollection === "all" || project.collection === activeCollection;
+    const searchable = [project.title, project.description, project.collection, ...project.tags].join(" ").toLocaleLowerCase();
+    return matchesKind && matchesCollection && searchable.includes(query);
   });
 
   grid.replaceChildren(...visible.map(renderCard));
@@ -232,17 +262,49 @@ function render() {
   emptyState.hidden = visible.length > 0;
 }
 
+function syncFilters() {
+  for (const filter of filters) {
+    const selected = filter.dataset.filter === activeFilter;
+    filter.classList.toggle("is-active", selected);
+    filter.setAttribute("aria-pressed", String(selected));
+  }
+  for (const filter of collectionFilters.querySelectorAll(".filter")) {
+    const selected = filter.dataset.collection === activeCollection;
+    filter.classList.toggle("is-active", selected);
+    filter.setAttribute("aria-pressed", String(selected));
+  }
+}
+
+function renderCollectionFilters() {
+  const collections = [...new Set(projects.map((project) => project.collection))].sort();
+  const options = [{ label: "All collections", value: "all" }, ...collections.map((collection) => ({
+    label: collection,
+    value: collection
+  }))];
+
+  collectionFilters.replaceChildren(...options.map((option) => {
+    const filter = makeElement("button", "filter", option.label);
+    filter.type = "button";
+    filter.dataset.collection = option.value;
+    filter.setAttribute("aria-pressed", String(option.value === activeCollection));
+    if (option.value === activeCollection) filter.classList.add("is-active");
+    filter.addEventListener("click", () => {
+      activeCollection = option.value;
+      syncFilters();
+      render();
+    });
+    return filter;
+  }));
+}
+
 for (const filter of filters) {
   filter.addEventListener("click", () => {
     activeFilter = filter.dataset.filter;
-    for (const button of filters) {
-      const selected = button === filter;
-      button.classList.toggle("is-active", selected);
-      button.setAttribute("aria-pressed", String(selected));
-    }
+    syncFilters();
     render();
   });
 }
 
 search.addEventListener("input", render);
+renderCollectionFilters();
 render();

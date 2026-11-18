@@ -6,7 +6,7 @@ A small, static home for linking your projects together. It does not copy or mov
 
 - A collage-inspired, responsive front page.
 - Search and filters for the project cards.
-- A **Copy card link** button on every item for sharing a direct link to it, with a selectable-link fallback if clipboard access is blocked.
+- A **Flush to share** button on every item for sharing a direct link to it, with a selectable-link fallback if clipboard access is blocked.
 - Links to the public projects already in your collection.
 - Named Kikiverse videos, plus a door to the full 79-clip public archive.
 
@@ -17,7 +17,8 @@ The private `Kiki-Library` repository is intentionally not listed on this public
 1. Copy the shareable URL from wherever the video already lives. This shelf links to it; it does not store or upload video files.
 2. Open `shelf.js` and add an entry to the `projects` array with `kind: "video"`.
 3. Add a link with the label `"Watch"` and your video URL. You can include more links on the same card if a clip has several homes.
-4. Commit the change. The new card will appear with the rest, and its **Copy card link** button will create a shareable link to that card.
+4. Give it a `collection` name to group it with related work, plus a few descriptive `tags`.
+5. Commit the change. The new card will appear with the rest, and its **Flush to share** button will create a shareable link to that card.
 
 Each entry has this shape:
 
@@ -25,7 +26,8 @@ Each entry has this shape:
 {
   id: "my-video",
   title: "My video",
-  kind: "art",
+  kind: "video",
+  collection: "Behind the scenes",
   description: "A short note about it.",
   tags: ["video", "behind the scenes"],
   links: [
