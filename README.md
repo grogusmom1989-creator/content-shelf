@@ -30,6 +30,10 @@ Use the `builds` and `schedules` lists for metadata only, with the same `visibil
 
 The private inventory is not synced or backed up by Git. If you choose to back up this metadata, use a location you trust; never include Muse vault contents. Check privacy before sharing the inventory.
 
+## Queue unfinished build work
+
+Use the private inventory's `workQueue` for work that has not been built yet. Each task should state its project, goal, acceptance criteria, and any source links. Set `status` to `queued`, `in-progress`, `blocked`, or `done`; keep a task blocked if it needs a missing decision, link, or Muse-only action. The scheduled Copilot check can take at most one well-defined GitHub/Copilot task every two hours, independent of Muse credits. It will not invent requirements, access Muse vaults, bypass Muse credits, or publish/commit changes without approval. The queue starts empty, so add concrete tasks before expecting scheduled implementation.
+
 ## Share a Meta Muse space
 
 Keep the space and its contents in Meta Muse. When Muse gives you a share link, add that URL as a door in `catalog.json` and set its platform to `Meta Muse`; the shelf links people back to the original space and does not copy or host it. Only add a link to the public catalog if the space's Muse sharing settings allow the audience you intend. If it is invite-only or private, keep it out of the public feed; you can track its minimal reference in your ignored local inventory instead.
