@@ -27,7 +27,7 @@
       "kind": "site",
       "collection": "Meta Muse",
       "description": "Check out Muse, your personal AI agent. Join with the invite link, then redeem code YNPLNZ in Settings within 48 hours. The invitation says we both get 1 billion Muse tokens.",
-      "tags": ["Meta Muse", "AI", "build together", "invite"],
+      "tags": ["AI", "build together", "invite"],
       "platforms": [{ "name": "Meta Muse" }],
       "links": [
         { "label": "Join Muse", "url": "https://muse.ai/join" }
@@ -39,7 +39,7 @@
       "kind": "site",
       "collection": "Mini-world 1: Kiki's World",
       "description": "Kiki's main public world at Storyspire: a collection of rooms, creative work, public Muse spaces, and her built-in PWA experience.",
-      "tags": ["main site", "Aetheria", "Storyspire", "Neocities", "PWA"],
+      "tags": ["main site", "Aetheria", "Storyspire", "Neocities"],
       "platforms": [{ "name": "Web" }, { "name": "PWA" }],
       "links": [
         { "label": "Visit the main site", "url": "https://1dkikiworldhq.neocities.org/" }
@@ -83,7 +83,7 @@
       "kind": "video",
       "collection": "Shared Video Doorways",
       "description": "A video doorway Kiki supports, credited to @ninos.books. Watch on the creator's TikTok.",
-      "tags": ["Kiki supports", "TikTok", "@ninos.books"],
+      "tags": ["Kiki supports", "@ninos.books"],
       "platforms": [{ "name": "TikTok" }],
       "links": [
         { "label": "Watch on TikTok", "url": "https://vm.tiktok.com/ZPLWkNBxd/" }
@@ -95,7 +95,7 @@
       "kind": "video",
       "collection": "Shared Video Doorways",
       "description": "A video doorway Kiki supports, credited to @Heartbreak_Heather_Weather. Watch on the creator's TikTok.",
-      "tags": ["Kiki supports", "TikTok", "music"],
+      "tags": ["Kiki supports", "music"],
       "platforms": [{ "name": "TikTok" }],
       "links": [
         { "label": "Watch on TikTok", "url": "https://vm.tiktok.com/ZPLWk515D/" }
@@ -107,7 +107,7 @@
       "kind": "video",
       "collection": "Shared Video Doorways",
       "description": "A Luke Jackson video doorway shared by Kiki. Watch the original on TikTok.",
-      "tags": ["Kiki shared", "TikTok", "Luke Jackson"],
+      "tags": ["Kiki shared", "Luke Jackson"],
       "platforms": [{ "name": "TikTok" }],
       "links": [
         { "label": "Watch on TikTok", "url": "https://vm.tiktok.com/ZPLvh9VXh/" }
@@ -119,7 +119,7 @@
       "kind": "video",
       "collection": "Shared Video Doorways",
       "description": "A challenge-game video doorway shared by Kiki, credited to @sticksega. Watch on TikTok.",
-      "tags": ["Kiki shared", "TikTok", "games"],
+      "tags": ["Kiki shared", "games"],
       "platforms": [{ "name": "TikTok" }],
       "links": [
         { "label": "Watch on TikTok", "url": "https://vm.tiktok.com/ZPLvhbkHk/" }
@@ -131,7 +131,7 @@
       "kind": "site",
       "collection": "Shared Creator Doorways",
       "description": "A public creator-profile doorway shared by Kiki, credited to @edwin_pouldar.",
-      "tags": ["Kiki shared", "TikTok", "creator"],
+      "tags": ["Kiki shared", "creator"],
       "platforms": [{ "name": "TikTok" }],
       "links": [
         { "label": "Visit on TikTok", "url": "https://vm.tiktok.com/ZP9fcBfmuDyWE-ehpto/" }
@@ -143,7 +143,7 @@
       "kind": "video",
       "collection": "Shared Video Doorways",
       "description": "A music doorway shared by Kiki, credited to Celtics Moonlight Songs. Watch the original on YouTube.",
-      "tags": ["Kiki shared", "YouTube", "Celtic music"],
+      "tags": ["Kiki shared", "Celtic music"],
       "platforms": [{ "name": "YouTube" }],
       "links": [
         { "label": "Watch on YouTube", "url": "https://youtu.be/e3qxMWxuIXY" }
@@ -355,7 +355,7 @@
       "kind": "site",
       "collection": "Mini-world 2: Kikiverse",
       "description": "A colorful world of little web experiences, gathered in one place.",
-      "tags": ["world", "web", "main site", "GitHub Pages"],
+      "tags": ["world", "main site", "GitHub Pages"],
       "platforms": [{ "name": "Web" }],
       "links": [
         { "label": "Visit the site", "url": "https://grogusmom1989-creator.github.io/kikiverse/" },

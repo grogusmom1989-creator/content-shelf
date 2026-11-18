@@ -475,11 +475,45 @@ h1 em {
   opacity: .6;
 }
 
-.shelf-grid {
+.shelf-groups {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: end;
-  gap: 1.4rem;
+  gap: clamp(2.8rem, 6vw, 5rem);
+}
+
+.collection-group {
+  min-width: 0;
+}
+
+.collection-group-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid rgba(255, 211, 94, .55);
+}
+
+.collection-group-heading h3 {
+  margin: 0;
+  color: var(--pink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-weight: 600;
+}
+
+.collection-group-heading span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: .7rem;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 2rem;
 }
 
 .card {
@@ -824,8 +858,8 @@ footer a {
     transform-origin: center;
   }
 
-  .shelf-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .collection-grid {
+    gap: 1.5rem;
   }
 
   .next-section {
@@ -909,9 +943,13 @@ footer a {
     flex-direction: column;
   }
 
-  .shelf-grid {
+  .collection-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  .collection-group-heading {
+    align-items: flex-start;
   }
 
   .card {

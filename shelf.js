@@ -116,6 +116,24 @@ function renderCard(project) {
   return card;
 }
 
+function renderCollectionGroup(collection, entries) {
+  const section = makeElement("section", "collection-group");
+  const headingId = `collection-${entries[0].id}`;
+  section.setAttribute("aria-labelledby", headingId);
+  const heading = makeElement("div", "collection-group-heading");
+  const countLabel = `${entries.length} ${entries.length === 1 ? "door" : "doors"}`;
+  const title = makeElement("h3", "", collection);
+  title.id = headingId;
+  heading.append(
+    title,
+    makeElement("span", "", countLabel)
+  );
+  const cardGrid = makeElement("div", "shelf-grid collection-grid");
+  cardGrid.append(...entries.map(renderCard));
+  section.append(heading, cardGrid);
+  return section;
+}
+
 function render() {
   const query = search.value.trim().toLocaleLowerCase();
   const visible = projects.filter((project) => {
@@ -137,7 +155,15 @@ function render() {
   });
 
   visibleProjects = visible;
-  grid.replaceChildren(...visible.map(renderCard));
+  const groups = new Map();
+  for (const project of visible) {
+    const collection = project.collection || "More doors";
+    if (!groups.has(collection)) groups.set(collection, []);
+    groups.get(collection).push(project);
+  }
+  grid.replaceChildren(...[...groups].map(([collection, entries]) =>
+    renderCollectionGroup(collection, entries)
+  ));
   count.textContent = `${visible.length} ${visible.length === 1 ? "piece" : "pieces"} in view`;
   if (visible.length === 0 && activeFilter === "video" && query === "") {
     emptyState.textContent = activeCollection === "all"
@@ -233,7 +259,7 @@ search.addEventListener("input", render);
 
 async function loadCatalog() {
   try {
-    const response = await fetch("catalog.json?v=10");
+    const response = await fetch("catalog.json?v=11");
     if (!response.ok) throw new Error(`Catalog request failed with status ${response.status}`);
     const catalog = await response.json();
     if (!Array.isArray(catalog.items)) throw new TypeError("Catalog is missing its items list");

@@ -5,6 +5,7 @@ A small, static extension of one big Kiki universe made of mini worlds. It conne
 ## What is included
 
 - A responsive Kiki-themed front page inspired by Aetheria's deep-purple, pink, and gold look.
+- Cards grouped into separate mini-world and collection sections with more breathing room.
 - Search, type, collection, and platform filters for the project cards.
 - A **Pick one for me** button that spotlights a random door from the currently visible collection.
 - A **Flush to share** button on every item for sharing a direct link to it, with a selectable-link fallback if clipboard access is blocked.
