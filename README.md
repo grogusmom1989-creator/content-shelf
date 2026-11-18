@@ -39,6 +39,8 @@ Use the private inventory's `workQueue` for work that has not been built yet. Ea
 
 Keep the space and its contents in Meta Muse. When Muse gives you a share link, add that URL as a door in `catalog.json` and set its platform to `Meta Muse`; the shelf links people back to the original space and does not copy or host it. Only add a link to the public catalog if the space's Muse sharing settings allow the audience you intend. If it is invite-only or private, keep it out of the public feed; you can track its minimal reference in your ignored local inventory instead.
 
+The **Build with Muse** door is the public Muse join/referral link, not an invite to one of your personal spaces. Its card includes the referral code and redemption window you provided.
+
 ## Add a video or another piece
 
 1. Copy the shareable URL from wherever the video already lives. This shelf links to it; it does not store or upload video files.

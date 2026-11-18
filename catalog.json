@@ -4,6 +4,18 @@
   "description": "A shared index of projects, art, videos, and platform versions.",
   "items": [
     {
+      "id": "muse-join",
+      "title": "Build with Muse",
+      "kind": "site",
+      "collection": "Meta Muse",
+      "description": "Check out Muse, your personal AI agent. Join with the invite link, then redeem code YNPLNZ in Settings within 48 hours. The invitation says we both get 1 billion Muse tokens.",
+      "tags": ["Meta Muse", "AI", "build together", "invite"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [
+        { "label": "Join Muse", "url": "https://muse.ai/join" }
+      ]
+    },
+    {
       "id": "kikiverse",
       "title": "Kikiverse",
       "kind": "site",
