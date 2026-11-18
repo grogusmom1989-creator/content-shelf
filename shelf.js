@@ -115,9 +115,10 @@ function renderCard(project) {
   card.dataset.kind = project.kind;
 
   const topline = makeElement("div", "card-topline");
+  const kindLabels = { art: "Art & play", site: "Site", video: "Video" };
   topline.append(
-    makeElement("span", "card-kind", project.kind === "art" ? "Art & play" : project.kind),
-    makeElement("span", "card-mark", "✳")
+    makeElement("span", "card-kind", kindLabels[project.kind] || "Project"),
+    makeElement("span", "card-mark", project.kind === "video" ? "▶" : "✳")
   );
   card.append(topline);
   card.append(makeElement("h3", "", project.title));
@@ -144,7 +145,15 @@ function renderCard(project) {
       await navigator.clipboard.writeText(url);
       copyStatus.textContent = `Copied a link to ${project.title}.`;
     } catch (error) {
-      copyStatus.textContent = "Copy isn't available here. Copy this page's address and add #" + project.id;
+      const input = makeElement("input", "share-url");
+      input.type = "text";
+      input.readOnly = true;
+      input.value = url;
+      input.setAttribute("aria-label", `Share link for ${project.title}`);
+      card.append(input);
+      input.focus();
+      input.select();
+      copyStatus.textContent = `Copy isn't available here. The link to ${project.title} is selected; press Ctrl+C to copy it.`;
     }
   });
   bottom.append(links, share);
@@ -162,6 +171,11 @@ function render() {
 
   grid.replaceChildren(...visible.map(renderCard));
   count.textContent = `${visible.length} ${visible.length === 1 ? "piece" : "pieces"} in view`;
+  if (visible.length === 0 && activeFilter === "video" && query === "") {
+    emptyState.textContent = "No videos on this shelf yet. Add a shareable video URL to the projects list in shelf.js.";
+  } else {
+    emptyState.textContent = "No matches yet. Try another word or filter.";
+  }
   emptyState.hidden = visible.length > 0;
 }
 

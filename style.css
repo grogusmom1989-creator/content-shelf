@@ -507,6 +507,18 @@ h1 em {
   color: var(--orange);
 }
 
+.share-url {
+  width: 100%;
+  margin-top: .8rem;
+  padding: .55rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .4rem;
+  background: rgba(255, 250, 240, .7);
+  color: var(--ink);
+  font-family: "DM Mono", monospace;
+  font-size: .68rem;
+}
+
 .empty-state {
   padding: 2rem 0;
   color: var(--muted);
