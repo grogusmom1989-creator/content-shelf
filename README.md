@@ -1,10 +1,10 @@
-# Everything Shelf
+# Kiki Content Project Shelf
 
-A small, static home for linking your projects together. It does not copy or move your existing work: the cards link back to the original sites and repositories. The collection follows a creative path that started from scratch in Meta Muse, grew through Copilot and other AI tools, and brings all the work together as one collage.
+A small, static home for bringing your creative worlds together. It does not copy or move your existing work: each doorway links back to the original site, space, video, or repository. The collection follows a creative path that started from scratch in Meta Muse and grew into a connected Kiki universe.
 
 ## What is included
 
-- A collage-inspired, responsive front page.
+- A responsive Kiki-themed front page inspired by Aetheria's deep-purple, pink, and gold look.
 - Search, type, collection, and platform filters for the project cards.
 - A **Pick one for me** button that spotlights a random door from the currently visible collection.
 - A **Flush to share** button on every item for sharing a direct link to it, with a selectable-link fallback if clipboard access is blocked.
