@@ -255,7 +255,9 @@ function render() {
   grid.replaceChildren(...visible.map(renderCard));
   count.textContent = `${visible.length} ${visible.length === 1 ? "piece" : "pieces"} in view`;
   if (visible.length === 0 && activeFilter === "video" && query === "") {
-    emptyState.textContent = "No videos on this shelf yet. Add a shareable video URL to the projects list in shelf.js.";
+    emptyState.textContent = activeCollection === "all"
+      ? "No videos on this shelf yet. Add a shareable video URL to the projects list in shelf.js."
+      : `No videos in ${activeCollection} yet. Clear the collection filter to see every video.`;
   } else {
     emptyState.textContent = "No matches yet. Try another word or filter.";
   }
