@@ -28,6 +28,206 @@
       ]
     },
     {
+      "id": "plush-crew-closet",
+      "title": "Plush Crew Closet",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "plush"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/plush-crew-closet.html" }]
+    },
+    {
+      "id": "music-bands",
+      "title": "Music & Bands",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "music"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/music-bands.html" }]
+    },
+    {
+      "id": "story-chapters",
+      "title": "Story Chapters",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "stories"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/story-chapters.html" }]
+    },
+    {
+      "id": "case-files-tributes",
+      "title": "Case Files & Tributes",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "research"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/case-files-tributes.html" }]
+    },
+    {
+      "id": "ideas",
+      "title": "Your Ideas",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "ideas"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/ideas.html" }]
+    },
+    {
+      "id": "layouts",
+      "title": "Layouts",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "design"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/layouts.html" }]
+    },
+    {
+      "id": "watch-face-wardrobe",
+      "title": "Watch Face Wardrobe",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "wearables"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/watch-face-wardrobe.html" }]
+    },
+    {
+      "id": "daily-crossword",
+      "title": "Daily Crossword",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "games"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/daily-crossword.html" }]
+    },
+    {
+      "id": "one-direction-tour-blogs",
+      "title": "One Direction · Tour Blogs",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "blogs"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/one-direction.html" }]
+    },
+    {
+      "id": "fan-notes",
+      "title": "Fan Notes",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "community"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/fan-notes.html" }]
+    },
+    {
+      "id": "my-ai-crew",
+      "title": "My AI Crew",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "AI"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/my-ai-crew.html" }]
+    },
+    {
+      "id": "news-ocean",
+      "title": "News Ocean",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "news"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/news-ocean.html" }]
+    },
+    {
+      "id": "ai-me-theater",
+      "title": "AI-Me Theater",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "theater"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/ai-me-theater.html" }]
+    },
+    {
+      "id": "the-bridge",
+      "title": "The Bridge",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "bridge"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/the-bridge.html" }]
+    },
+    {
+      "id": "icon-gallery",
+      "title": "Icon Gallery",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "icons"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/icon-gallery.html" }]
+    },
+    {
+      "id": "one-heart",
+      "title": "One Heart",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "community"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/one-heart.html" }]
+    },
+    {
+      "id": "amber-alerts",
+      "title": "AMBER Alerts",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "safety"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/amber-alerts.html" }]
+    },
+    {
+      "id": "featured-videos",
+      "title": "Featured Videos",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "videos"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/featured-videos.html" }]
+    },
+    {
+      "id": "complaint-club",
+      "title": "The Complaint Club",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "community"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/complaint-club.html" }]
+    },
+    {
+      "id": "kikis-toolbox",
+      "title": "Kiki's Toolbox",
+      "kind": "site",
+      "collection": "Muse Spaces",
+      "description": "A public Muse space doorway from Kiki's Aetheria.",
+      "tags": ["Meta Muse", "public space", "tools"],
+      "platforms": [{ "name": "Meta Muse" }],
+      "links": [{ "label": "Visit room page", "url": "https://1dkikiworldhq.neocities.org/kikis-toolbox.html" }]
+    },
+    {
       "id": "kikiverse",
       "title": "Kikiverse",
       "kind": "site",
