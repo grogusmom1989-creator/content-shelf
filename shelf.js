@@ -144,13 +144,16 @@ function renderCard(project) {
     try {
       await navigator.clipboard.writeText(url);
       copyStatus.textContent = `Copied a link to ${project.title}.`;
-    } catch (error) {
-      const input = makeElement("input", "share-url");
-      input.type = "text";
-      input.readOnly = true;
-      input.value = url;
-      input.setAttribute("aria-label", `Share link for ${project.title}`);
-      card.append(input);
+    } catch {
+      let input = card.querySelector(".share-url");
+      if (!input) {
+        input = makeElement("input", "share-url");
+        input.type = "text";
+        input.readOnly = true;
+        input.value = url;
+        input.setAttribute("aria-label", `Share link for ${project.title}`);
+        card.append(input);
+      }
       input.focus();
       input.select();
       copyStatus.textContent = `Copy isn't available here. The link to ${project.title} is selected; press Ctrl+C to copy it.`;
