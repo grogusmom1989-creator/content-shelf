@@ -6,12 +6,16 @@ const count = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
 const catalogError = document.querySelector("#catalog-error");
 const copyStatus = document.querySelector("#copy-status");
+const surpriseButton = document.querySelector("#surprise-button");
+const surpriseStatus = document.querySelector("#surprise-status");
 const filters = [...document.querySelectorAll(".filter[data-filter]")];
 const collectionFilters = document.querySelector("#collection-filters");
 const platformFilters = document.querySelector("#platform-filters");
 let activeFilter = "all";
 let activeCollection = "all";
 let activePlatform = "all";
+let visibleProjects = [];
+let lastSurpriseId = "";
 
 function makeElement(tag, className, text) {
   const element = document.createElement(tag);
@@ -32,6 +36,7 @@ function renderCard(project) {
   const card = makeElement("article", "card");
   card.id = project.id;
   card.dataset.kind = project.kind;
+  card.tabIndex = -1;
 
   const topline = makeElement("div", "card-topline");
   const kindLabels = { art: "Art & play", site: "Site", video: "Video" };
@@ -131,6 +136,7 @@ function render() {
     return matchesKind && matchesCollection && matchesPlatform && searchable.includes(query);
   });
 
+  visibleProjects = visible;
   grid.replaceChildren(...visible.map(renderCard));
   count.textContent = `${visible.length} ${visible.length === 1 ? "piece" : "pieces"} in view`;
   if (visible.length === 0 && activeFilter === "video" && query === "") {
@@ -142,6 +148,26 @@ function render() {
   }
   emptyState.hidden = visible.length > 0;
 }
+
+surpriseButton.addEventListener("click", () => {
+  if (visibleProjects.length === 0) return;
+
+  const choices = visibleProjects.length > 1
+    ? visibleProjects.filter((project) => project.id !== lastSurpriseId)
+    : visibleProjects;
+  const project = choices[Math.floor(Math.random() * choices.length)];
+  const card = document.getElementById(project.id);
+  if (!card) return;
+
+  lastSurpriseId = project.id;
+  card.classList.remove("is-surprise");
+  const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  card.scrollIntoView({ behavior, block: "center" });
+  card.focus({ preventScroll: true });
+  requestAnimationFrame(() => card.classList.add("is-surprise"));
+  window.setTimeout(() => card.classList.remove("is-surprise"), 1500);
+  surpriseStatus.textContent = `Your next door: ${project.title}.`;
+});
 
 function syncFilters() {
   for (const filter of filters) {
@@ -214,6 +240,7 @@ async function loadCatalog() {
     projects = catalog.items;
     renderFilters();
     render();
+    surpriseButton.disabled = projects.length === 0;
   } catch (error) {
     catalogError.hidden = false;
     catalogError.textContent = "The collection could not load. Refresh the page or open catalog.json directly.";

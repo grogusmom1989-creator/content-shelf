@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#f5ead7">
     <meta name="description" content="A colorful little index of projects, art, experiments, and things to watch.">
     <title>Everything, in one place</title>
-    <link rel="stylesheet" href="style.css?v=3">
-    <script src="shelf.js?v=5" defer></script>
+    <link rel="stylesheet" href="style.css?v=4">
+    <script src="shelf.js?v=6" defer></script>
   </head>
   <body>
     <header class="masthead">
@@ -66,6 +66,14 @@
         <div class="collection-tools">
           <span class="collection-label">Browse a platform</span>
           <div class="filters" id="platform-filters" role="group" aria-label="Filter by platform"></div>
+        </div>
+
+        <div class="surprise-row">
+          <p>Can't pick a door?</p>
+          <button class="surprise-button" id="surprise-button" type="button" disabled>
+            ✨ Pick one for me
+          </button>
+          <span class="visually-hidden" id="surprise-status" aria-live="polite"></span>
         </div>
 
         <p class="result-count" id="result-count" aria-live="polite">Loading the catalog&hellip;</p>

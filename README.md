@@ -6,6 +6,7 @@ A small, static home for linking your projects together. It does not copy or mov
 
 - A collage-inspired, responsive front page.
 - Search, type, collection, and platform filters for the project cards.
+- A **Pick one for me** button that spotlights a random door from the currently visible collection.
 - A **Flush to share** button on every item for sharing a direct link to it, with a selectable-link fallback if clipboard access is blocked.
 - Links to the public projects already in your collection.
 - Named Kikiverse videos, plus a door to the full 79-clip public archive.

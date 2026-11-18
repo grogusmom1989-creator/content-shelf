@@ -424,6 +424,53 @@ h1 em {
   color: var(--muted);
 }
 
+.surprise-row {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 1.8rem;
+}
+
+.surprise-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.surprise-button {
+  padding: .65rem .95rem;
+  border: 1px solid var(--orange);
+  border-radius: 99px;
+  background: #fff9ee;
+  color: var(--ink);
+  font-family: "DM Mono", monospace;
+  font-size: .73rem;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(230, 104, 59, .25);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.surprise-button:hover:not(:disabled) {
+  transform: translateY(-2px) rotate(-2deg);
+  background: #fff1e2;
+  box-shadow: 0 5px 0 rgba(230, 104, 59, .25);
+}
+
+.surprise-button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(230, 104, 59, .25);
+}
+
+.surprise-button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.surprise-button:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
 .shelf-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -503,6 +550,16 @@ h1 em {
   z-index: 2;
   box-shadow: 7px 9px 0 rgba(40, 37, 31, .18);
   transform: translateY(-5px) rotate(0);
+}
+
+.card.is-surprise {
+  animation: surprise-door .75s ease-in-out 2;
+}
+
+@keyframes surprise-door {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  35% { transform: translateY(-10px) rotate(2deg); }
+  70% { transform: translateY(-4px) rotate(-2deg); }
 }
 
 .card-topline {
@@ -658,6 +715,12 @@ h1 em {
 .empty-state {
   padding: 2rem 0;
   color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .surprise-row {
+    flex-wrap: wrap;
+  }
   text-align: center;
 }
 
