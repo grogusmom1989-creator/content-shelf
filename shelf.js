@@ -137,7 +137,7 @@ function renderCard(project) {
     link.rel = "noopener noreferrer";
     links.append(link);
   }
-  const share = makeElement("button", "card-share", "Copy card link ↗");
+  const share = makeElement("button", "card-share", "Flush to share");
   share.type = "button";
   share.addEventListener("click", async () => {
     const url = `${window.location.origin}${window.location.pathname}#${project.id}`;

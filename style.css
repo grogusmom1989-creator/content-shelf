@@ -158,21 +158,51 @@ h1 em {
 .button-link {
   display: inline-flex;
   align-items: center;
-  gap: 2rem;
-  padding: .92rem 1.2rem;
-  border: 1px solid var(--ink);
-  border-radius: 99px;
-  background: var(--ink);
-  color: #fff7e9;
+  gap: .9rem;
+  padding: .55rem .65rem .55rem 1.1rem;
+  border: 2px solid #857c6d;
+  border-radius: .75rem;
+  background: linear-gradient(180deg, #fffdfa 0%, #e0d9cb 100%);
+  color: var(--ink);
   font-family: "DM Mono", monospace;
   font-size: .78rem;
   text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: inset 0 2px 2px #fff, 0 4px 0 #aaa08e, 0 7px 12px rgba(40, 37, 31, .12);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+
+.button-link span {
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  border: 1px solid #797b77;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #fff 0 12%, #d7d9d4 38%, #929792 72%, #6d726e 100%);
+  color: #353a36;
+  box-shadow: inset 0 1px 2px #fff, 0 2px 0 #777b76;
+  transition: transform .14s ease, box-shadow .14s ease;
 }
 
 .button-link:hover {
-  transform: translateY(-3px) rotate(-1deg);
-  box-shadow: 4px 5px 0 var(--orange);
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 3px rgba(40, 37, 31, .16), 0 2px 0 #aaa08e, 0 4px 8px rgba(40, 37, 31, .12);
+}
+
+.button-link:hover span {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 3px rgba(40, 37, 31, .22), 0 0 0 #777b76;
+}
+
+.button-link:focus-visible,
+.card-share:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.button-link:active {
+  transform: translateY(4px);
+  box-shadow: inset 0 3px 4px rgba(40, 37, 31, .2), 0 0 0 #aaa08e;
 }
 
 .collage {
@@ -495,16 +525,48 @@ h1 em {
 }
 
 .card-share {
-  padding: .35rem 0 .35rem .4rem;
-  border: 0;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .35rem .65rem .35rem .4rem;
+  border: 1px solid #827a6c;
+  border-radius: 99px;
+  background: linear-gradient(180deg, #fffdfa 0%, #dfd9cd 100%);
   color: var(--ink);
   cursor: pointer;
+  box-shadow: inset 0 1px 2px #fff, 0 2px 0 #9e9587;
+  transition: transform .14s ease, box-shadow .14s ease;
   white-space: nowrap;
 }
 
+.card-share::before {
+  content: "↗";
+  display: grid;
+  width: 1.3rem;
+  height: 1.3rem;
+  place-items: center;
+  border: 1px solid #797b77;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #fff 0 12%, #d7d9d4 38%, #929792 72%, #6d726e 100%);
+  color: #353a36;
+  box-shadow: inset 0 1px 2px #fff, 0 1px 0 #777b76;
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+
 .card-share:hover {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 3px rgba(40, 37, 31, .15), 0 1px 0 #9e9587;
   color: var(--orange);
+}
+
+.card-share:hover::before {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 3px rgba(40, 37, 31, .18), 0 0 0 #777b76;
+}
+
+.card-share:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 4px rgba(40, 37, 31, .2), 0 0 0 #9e9587;
 }
 
 .share-url {
@@ -569,8 +631,8 @@ h1 em {
 }
 
 .button-light {
-  border-color: var(--paper);
-  background: var(--paper);
+  border-color: #9c927f;
+  background: linear-gradient(180deg, #fffdfa 0%, #e0d9cb 100%);
   color: var(--ink);
 }
 
