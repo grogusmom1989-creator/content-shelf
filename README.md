@@ -1,6 +1,6 @@
 # Kiki Content Project Shelf
 
-A small, static home for bringing your creative worlds together. It does not copy or move your existing work: each doorway links back to the original site, space, video, or repository. The collection follows a creative path that started from scratch in Meta Muse and grew into a connected Kiki universe.
+A small, static extension of one big Kiki universe made of mini worlds. It connects Kiki's Aetheria, KikiVerse, and their rooms, videos, social links, and projects without copying them; each doorway links to its original home.
 
 ## What is included
 
@@ -9,10 +9,13 @@ A small, static home for bringing your creative worlds together. It does not cop
 - A **Pick one for me** button that spotlights a random door from the currently visible collection.
 - A **Flush to share** button on every item for sharing a direct link to it, with a selectable-link fallback if clipboard access is blocked.
 - Links to the public projects already in your collection.
+- Public Muse room doors, Kiki's public social links, the One Door page, and attributed links to videos she supports.
 - Named Kikiverse videos, plus a door to the full 79-clip public archive.
 - A public JSON catalog that other websites and apps can reuse.
 
 The private `Kiki-Library` repository is intentionally not listed on this public site.
+
+`catalog.json` is the public source of truth. GitHub Pages deploys catalog changes after they are pushed; the static site does not crawl Aetheria or Muse for new links by itself.
 
 ## Keep a private master inventory
 
@@ -37,7 +40,7 @@ Use the private inventory's `workQueue` for work that has not been built yet. Ea
 
 ## Share a Meta Muse space
 
-Keep the space and its contents in Meta Muse. The public rooms listed in Aetheria's **Space Viewing Rooms** section now have individual doors on the shelf that lead to their existing Neocities room pages. When Muse gives you a direct share link for a room, it can be added as another link on that room's door; the shelf never copies or hosts the space. Private vaults and the names listed only under **Doorway Rooms** stay out of the public feed.
+Keep the space and its contents in Meta Muse. The public rooms listed in Aetheria's **Space Viewing Rooms** section have individual doors on the shelf that lead to their existing Neocities room pages. The Aetheria PWA is represented on the same main-site door rather than copied as another app. When Muse gives you a direct share link for a room, it can be added as another link on that room's door; the shelf never copies or hosts the space. Private vaults and the names listed only under **Doorway Rooms** stay out of the public feed.
 
 The **Build with Muse** door is the public Muse join/referral link, not an invite to one of your personal spaces. Its card includes the referral code and redemption window you provided.
 

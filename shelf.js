@@ -233,7 +233,7 @@ search.addEventListener("input", render);
 
 async function loadCatalog() {
   try {
-    const response = await fetch("catalog.json?v=8");
+    const response = await fetch("catalog.json?v=10");
     if (!response.ok) throw new Error(`Catalog request failed with status ${response.status}`);
     const catalog = await response.json();
     if (!Array.isArray(catalog.items)) throw new TypeError("Catalog is missing its items list");
