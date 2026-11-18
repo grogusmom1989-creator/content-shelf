@@ -215,10 +215,14 @@ h1 em {
 
 .collage-orbit {
   position: absolute;
-  inset: 3rem 1.5rem 2rem 2.5rem;
+  top: .7rem;
+  left: 3.8rem;
+  width: 21rem;
+  height: 26rem;
   border: 1px solid var(--ink);
-  border-radius: 50%;
-  transform: rotate(-24deg);
+  border-radius: 11rem 11rem .8rem .8rem;
+  background: linear-gradient(180deg, rgba(233, 161, 170, .22), rgba(169, 199, 215, .12));
+  transform: rotate(4deg);
 }
 
 .collage-orbit::before,
@@ -226,29 +230,31 @@ h1 em {
   content: "";
   position: absolute;
   border: 1px solid var(--ink);
-  border-radius: 50%;
-  inset: 1.7rem -1.5rem;
-  transform: rotate(48deg);
+  border-radius: inherit;
+  inset: .7rem;
+  transform: none;
 }
 
 .collage-orbit::after {
-  inset: -1rem 3.5rem;
-  transform: rotate(83deg);
+  inset: 6rem 2rem .7rem;
+  border-radius: 9rem 9rem .5rem .5rem;
+  opacity: .5;
 }
 
 .collage-sun {
   position: absolute;
-  top: 4.4rem;
-  left: 8rem;
+  top: 2rem;
+  left: 5.2rem;
   display: grid;
-  width: 12rem;
-  height: 12rem;
+  width: 17rem;
+  height: 23rem;
   place-items: center;
-  border-radius: 48% 52% 43% 57%;
-  color: #7d3b2a;
-  background: var(--orange);
-  font-size: 6rem;
-  box-shadow: 10px 12px 0 var(--pink);
+  border: 1px solid #6f3946;
+  border-radius: 9rem 9rem .55rem .55rem;
+  color: #fff1dd;
+  background: linear-gradient(155deg, #edb3b0, #d86f78 54%, #a34f63);
+  font-size: 5rem;
+  box-shadow: 10px 12px 0 var(--blue), inset 0 0 0 .65rem rgba(255, 244, 224, .18);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -404,41 +410,73 @@ h1 em {
 .shelf-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15rem;
+  align-items: end;
+  gap: 1.4rem;
 }
 
 .card {
   position: relative;
   display: flex;
-  min-height: 17rem;
+  min-height: 23rem;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.4rem;
+  padding: 2.3rem 1.3rem 1.2rem;
+  overflow: hidden;
   border: 1px solid rgba(40, 37, 31, .62);
+  border-radius: 9rem 9rem .8rem .8rem;
   background: #fff9ee;
   box-shadow: 4px 5px 0 rgba(40, 37, 31, .14);
+  transform-origin: center bottom;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
+.card::before {
+  position: absolute;
+  inset: .55rem .55rem .55rem;
+  border: 1px solid rgba(40, 37, 31, .25);
+  border-radius: 8.5rem 8.5rem .45rem .45rem;
+  content: "";
+  pointer-events: none;
+}
+
+.card::after {
+  position: absolute;
+  top: 52%;
+  right: 1.35rem;
+  width: .72rem;
+  height: .72rem;
+  border: 1px solid #797b77;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #fff 0 12%, #d7d9d4 38%, #929792 72%, #6d726e 100%);
+  box-shadow: 0 1px 2px rgba(40, 37, 31, .35);
+  content: "";
+  pointer-events: none;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .card:nth-child(4n + 1) {
-  border-radius: 1.2rem .2rem 1rem .2rem;
+  border-radius: 9rem 9rem .8rem .8rem;
   transform: rotate(-.6deg);
 }
 
 .card:nth-child(4n + 2) {
-  border-radius: .2rem 1rem .2rem 1.2rem;
+  border-radius: 9rem 9rem .8rem .8rem;
   background: #f0d7d2;
   transform: rotate(.5deg);
 }
 
 .card:nth-child(4n + 3) {
-  border-radius: .2rem 1.2rem .2rem 1rem;
+  border-radius: 9rem 9rem .8rem .8rem;
   background: #dce4c7;
   transform: rotate(.4deg);
 }
 
 .card:nth-child(4n) {
-  border-radius: 1rem .2rem 1.2rem .2rem;
+  border-radius: 9rem 9rem .8rem .8rem;
   background: #dce7eb;
   transform: rotate(-.5deg);
 }
@@ -720,18 +758,21 @@ footer a {
   }
 
   .collage-sun {
-    top: 3.5rem;
-    left: 6rem;
-    width: 9rem;
-    height: 9rem;
+    top: 1.5rem;
+    left: 4.5rem;
+    width: 14rem;
+    height: 19rem;
   }
 
   .collage-orbit {
-    inset: 2rem 1rem 1rem;
+    top: .2rem;
+    left: 3.2rem;
+    width: 17rem;
+    height: 21rem;
   }
 
   .collage-sticker {
-    top: 12rem;
+    top: 10rem;
     left: 1rem;
   }
 
@@ -759,7 +800,7 @@ footer a {
   }
 
   .card {
-    min-height: 15rem;
+    min-height: 20rem;
   }
 
   .next-section {

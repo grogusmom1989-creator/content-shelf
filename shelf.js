@@ -33,6 +33,56 @@ const projects = [
     ]
   },
   {
+    id: "kiki-uncle-louie-performance",
+    title: "Kiki & Uncle Louie Performance",
+    kind: "video",
+    description: "A performance piece already living in the Kikiverse video collection.",
+    tags: ["Kikiverse", "performance"],
+    links: [
+      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/media-generation-kiki-uncle-louie-performance-v-0-55853d62-6dfa-4ff2-8de3-e3ab8df7cb55.mp4" }
+    ]
+  },
+  {
+    id: "cozy-beauty-haul",
+    title: "Cozy Beauty Haul",
+    kind: "video",
+    description: "A cozy Sunday beauty haul from the Kikiverse collection.",
+    tags: ["Kikiverse", "beauty", "Sunday"],
+    links: [
+      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/try-it-sunday-cozy-beauty-haul-2026-10-04.mp4" }
+    ]
+  },
+  {
+    id: "burnin-up-remix",
+    title: "Burnin' Up Remix",
+    kind: "video",
+    description: "A remix clip already hosted with the other Kikiverse videos.",
+    tags: ["Kikiverse", "remix"],
+    links: [
+      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/videos/burnin-up-remix-2026-10-01.mp4" }
+    ]
+  },
+  {
+    id: "plush-crew-blooper-reel",
+    title: "Plush Crew Blooper Reel",
+    kind: "video",
+    description: "A blooper reel from the existing Kikiverse video archive.",
+    tags: ["Kikiverse", "bloopers"],
+    links: [
+      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/videos/plush-crew-blooper-reel-2026-10-01.mp4" }
+    ]
+  },
+  {
+    id: "kikiverse-video-archive",
+    title: "The Kikiverse Video Attic",
+    kind: "video",
+    description: "The original public asset folder holds 79 clips; browse the rest where they already live.",
+    tags: ["Kikiverse", "archive", "79 clips"],
+    links: [
+      { label: "Browse the video archive", url: "https://github.com/grogusmom1989-creator/kikiverse/tree/main/assets" }
+    ]
+  },
+  {
     id: "grogu-brick",
     title: "Grogu Brick",
     kind: "project",
