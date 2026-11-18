@@ -95,11 +95,13 @@ The Tigger entries currently include Android app version `27.0` and API-level me
 
 The shelf is plain HTML, CSS, and JavaScript, so it can also be uploaded to Neocities. The easiest way to keep one shared collection is to leave GitHub Pages as the canonical shelf and add its URL to your Neocities navigation, or fetch the JSON feed from a Neocities page. Neocities-hosted pages can also be added as links in any project entry.
 
-## Use your bridge and other platforms
+## Extend the bridge carefully
 
-Keep GitHub as the code and version-history home, and keep using the tools and bridge that help you create. This static shelf is a catalog, not an automatic sync engine: add the shareable links your bridge surfaces as entries here.
+The shelf is a read-only directory, not an account connector or auto-posting service. Start by manually adding links from one or two social platforms you use most. Keep each original where it lives; add its public/shareable URL as a `homes` link on the matching inventory item and, only if intended for everyone, as a `links` entry in `catalog.json`. If the same creation appears on several platforms, keep one canonical item and attach its distinct post URLs as homes rather than making duplicate cards.
 
-Public/shareable links from Microsoft services, Cloudflare-hosted video URLs, Neocities pages, and other platforms can all be added as links. Visitors still need whatever permissions the original service requires. A domain managed by Cloudflare can also point to GitHub Pages; this project does not change DNS or expose private storage.
+The private inventory's `bridgePolicy` is a planning record. Add a `sources` entry only when you choose a platform to track, with fields like `platform`, `accountLabel`, `profileUrl`, `visibility`, `mode: "manual-read-only"`, and `lastReviewedAt`. Do not store passwords, API keys, access tokens, or cookies there. The source list starts empty; no social accounts are connected, scanned, copied, or published automatically. Keep auto-publishing off unless you later choose a specific workflow and explicitly enable it.
+
+Public/shareable links from Meta, Microsoft services, Cloudflare-hosted video URLs, Neocities, and other platforms can be added as homes. Visitors still need whatever permissions the original service requires. A domain managed by Cloudflare can also point to GitHub Pages; this project does not change DNS or expose private storage.
 
 ## Publish on GitHub Pages
 
