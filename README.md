@@ -42,9 +42,11 @@ Use a unique, URL-friendly `id`. Links open in a new tab.
 
 The shelf is plain HTML, CSS, and JavaScript, so it can also be uploaded to Neocities. The easiest way to keep one shared collection is to leave GitHub Pages as the canonical shelf and add its URL to your Neocities navigation. If you upload a second copy, changes to `shelf.js` need to be uploaded there too. Neocities-hosted pages can also be added as links in any project entry.
 
-## Use Cloudflare alongside GitHub
+## Use your bridge and other platforms
 
-Keep GitHub as the code and version-history home. Cloudflare can keep doing its own job too: a domain managed there can point to GitHub Pages, and any already-public Cloudflare video URL can be added as a `kind: "video"` link. The shelf does not change DNS or expose private storage.
+Keep GitHub as the code and version-history home, and keep using the tools and bridge that help you create. This static shelf is a catalog, not an automatic sync engine: add the shareable links your bridge surfaces as entries here.
+
+Public/shareable links from Microsoft services, Cloudflare-hosted video URLs, Neocities pages, and other platforms can all be added as links. Visitors still need whatever permissions the original service requires. A domain managed by Cloudflare can also point to GitHub Pages; this project does not change DNS or expose private storage.
 
 ## Publish on GitHub Pages
 
