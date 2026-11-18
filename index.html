@@ -7,7 +7,7 @@
     <meta name="description" content="A colorful little index of projects, art, experiments, and things to watch.">
     <title>Everything, in one place</title>
     <link rel="stylesheet" href="style.css?v=3">
-    <script src="shelf.js?v=4" defer></script>
+    <script src="shelf.js?v=5" defer></script>
   </head>
   <body>
     <header class="masthead">
@@ -63,9 +63,15 @@
           <div class="filters" id="collection-filters" role="group" aria-label="Filter by collection"></div>
         </div>
 
-        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="collection-tools">
+          <span class="collection-label">Browse a platform</span>
+          <div class="filters" id="platform-filters" role="group" aria-label="Filter by platform"></div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite">Loading the catalog&hellip;</p>
         <div class="shelf-grid" id="shelf-grid"></div>
         <p class="empty-state" id="empty-state" hidden>No matches yet. Try another word or filter.</p>
+        <p class="empty-state" id="catalog-error" role="alert" hidden></p>
       </section>
 
       <section class="next-section">
@@ -82,6 +88,7 @@
     <footer>
       <span>Gathered with care <span aria-hidden="true">✳</span></span>
       <span>One collection, many doors.</span>
+      <a href="catalog.json">Open the catalog feed</a>
       <a href="#page-title">Back to the top ↑</a>
     </footer>
     <p class="copy-status visually-hidden" id="copy-status" aria-live="polite"></p>

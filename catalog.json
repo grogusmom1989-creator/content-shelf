@@ -1,0 +1,182 @@
+{
+  "name": "Everything Shelf",
+  "version": 1,
+  "description": "A shared index of projects, art, videos, and platform versions.",
+  "items": [
+    {
+      "id": "kikiverse",
+      "title": "Kikiverse",
+      "kind": "site",
+      "collection": "Kikiverse",
+      "description": "A colorful world of little web experiences, gathered in one place.",
+      "tags": ["world", "web"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Visit the site", "url": "https://grogusmom1989-creator.github.io/kikiverse/" },
+        { "label": "Source", "url": "https://github.com/grogusmom1989-creator/kikiverse" }
+      ]
+    },
+    {
+      "id": "healing-art-studio",
+      "title": "Healing Art Studio",
+      "kind": "art",
+      "collection": "Kikiverse",
+      "description": "A creative corner from the Kikiverse collection.",
+      "tags": ["art", "kikiverse"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Open the studio", "url": "https://grogusmom1989-creator.github.io/kikiverse/healing-art-studio.html" },
+        { "label": "Source", "url": "https://github.com/grogusmom1989-creator/kikiverse" }
+      ]
+    },
+    {
+      "id": "dazzly-fan-edition",
+      "title": "Dazzly Fan Edition",
+      "kind": "art",
+      "collection": "Kikiverse",
+      "description": "A bright fan-made experience, also part of Kikiverse.",
+      "tags": ["fan-made", "kikiverse"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Open Dazzly", "url": "https://grogusmom1989-creator.github.io/kikiverse/dazzly-fan-edition.html" },
+        { "label": "Source", "url": "https://github.com/grogusmom1989-creator/kikiverse" }
+      ]
+    },
+    {
+      "id": "kiki-uncle-louie-performance",
+      "title": "Kiki & Uncle Louie Performance",
+      "kind": "video",
+      "collection": "Kikiverse",
+      "description": "A performance piece already living in the Kikiverse video collection.",
+      "tags": ["Kikiverse", "performance"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Play video", "url": "https://grogusmom1989-creator.github.io/kikiverse/assets/media-generation-kiki-uncle-louie-performance-v-0-55853d62-6dfa-4ff2-8de3-e3ab8df7cb55.mp4" }
+      ]
+    },
+    {
+      "id": "cozy-beauty-haul",
+      "title": "Cozy Beauty Haul",
+      "kind": "video",
+      "collection": "Kikiverse",
+      "description": "A cozy Sunday beauty haul from the Kikiverse collection.",
+      "tags": ["Kikiverse", "beauty", "Sunday"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Play video", "url": "https://grogusmom1989-creator.github.io/kikiverse/assets/try-it-sunday-cozy-beauty-haul-2026-10-04.mp4" }
+      ]
+    },
+    {
+      "id": "burnin-up-remix",
+      "title": "Burnin' Up Remix",
+      "kind": "video",
+      "collection": "Kikiverse",
+      "description": "A remix clip already hosted with the other Kikiverse videos.",
+      "tags": ["Kikiverse", "remix"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Play video", "url": "https://grogusmom1989-creator.github.io/kikiverse/assets/videos/burnin-up-remix-2026-10-01.mp4" }
+      ]
+    },
+    {
+      "id": "plush-crew-blooper-reel",
+      "title": "Plush Crew Blooper Reel",
+      "kind": "video",
+      "collection": "Kikiverse",
+      "description": "A blooper reel from the existing Kikiverse video archive.",
+      "tags": ["Kikiverse", "bloopers"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Play video", "url": "https://grogusmom1989-creator.github.io/kikiverse/assets/videos/plush-crew-blooper-reel-2026-10-01.mp4" }
+      ]
+    },
+    {
+      "id": "kikiverse-video-archive",
+      "title": "The Kikiverse Video Attic",
+      "kind": "video",
+      "collection": "Kikiverse",
+      "description": "The original public asset folder holds 79 clips; browse the rest where they already live.",
+      "tags": ["Kikiverse", "archive", "79 clips"],
+      "platforms": [{ "name": "GitHub" }],
+      "links": [
+        { "label": "Browse the video archive", "url": "https://github.com/grogusmom1989-creator/kikiverse/tree/main/assets" }
+      ]
+    },
+    {
+      "id": "grogu-brick",
+      "title": "Grogu Brick",
+      "kind": "project",
+      "collection": "Grogu",
+      "description": "A Grogu-inspired project in the making.",
+      "tags": ["Grogu", "experiment"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Explore the project", "url": "https://github.com/grogusmom1989-creator/Grogu-brick" }
+      ]
+    },
+    {
+      "id": "tigger",
+      "title": "Tigger",
+      "kind": "project",
+      "collection": "Tigger",
+      "description": "An earlier Tigger project, kept here as part of the bigger picture.",
+      "tags": ["Tigger", "archive"],
+      "platforms": [
+        { "name": "Android", "versionName": "27.0", "versionCode": 27, "minSdk": 24, "targetSdk": 36 }
+      ],
+      "links": [
+        { "label": "Explore the project", "url": "https://github.com/grogusmom1989-creator/Tigger" }
+      ]
+    },
+    {
+      "id": "tigger-2",
+      "title": "Tigger 2.0",
+      "kind": "project",
+      "collection": "Tigger",
+      "description": "A second take in the Tigger family of projects.",
+      "tags": ["Tigger", "iteration"],
+      "platforms": [
+        { "name": "Android", "versionName": "27.0", "versionCode": 27, "minSdk": 24, "targetSdk": 36 }
+      ],
+      "links": [
+        { "label": "Explore the project", "url": "https://github.com/grogusmom1989-creator/Tigger-2.0" }
+      ]
+    },
+    {
+      "id": "cookies",
+      "title": "Cookies",
+      "kind": "art",
+      "collection": "Art & play",
+      "description": "More playful experiments and creative pieces to explore.",
+      "tags": ["play", "remix"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Explore the collection", "url": "https://github.com/grogusmom1989-creator/Cookies" }
+      ]
+    },
+    {
+      "id": "kikis-world",
+      "title": "Kiki's World 2.0",
+      "kind": "project",
+      "collection": "Kiki's World",
+      "description": "A newer world in the collection, growing alongside the rest.",
+      "tags": ["world", "iteration"],
+      "platforms": [{ "name": "Web" }],
+      "links": [
+        { "label": "Explore the project", "url": "https://github.com/grogusmom1989-creator/Kikis-world-2.0" }
+      ]
+    },
+    {
+      "id": "liam-panda-payne",
+      "title": "Liam Panda Payne",
+      "kind": "art",
+      "collection": "Art & play",
+      "description": "A panda-themed creation in the mix.",
+      "tags": ["panda", "character"],
+      "platforms": [],
+      "links": [
+        { "label": "Explore the project", "url": "https://github.com/grogusmom1989-creator/liam-panda-payne" }
+      ]
+    }
+  ]
+}

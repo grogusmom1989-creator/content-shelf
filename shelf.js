@@ -1,178 +1,31 @@
-const projects = [
-  {
-    id: "kikiverse",
-    title: "Kikiverse",
-    kind: "site",
-    collection: "Kikiverse",
-    description: "A colorful world of little web experiences, gathered in one place.",
-    tags: ["world", "web"],
-    links: [
-      { label: "Visit the site", url: "https://grogusmom1989-creator.github.io/kikiverse/" },
-      { label: "Source", url: "https://github.com/grogusmom1989-creator/kikiverse" }
-    ]
-  },
-  {
-    id: "healing-art-studio",
-    title: "Healing Art Studio",
-    kind: "art",
-    collection: "Kikiverse",
-    description: "A creative corner from the Kikiverse collection.",
-    tags: ["art", "kikiverse"],
-    links: [
-      { label: "Open the studio", url: "https://grogusmom1989-creator.github.io/kikiverse/healing-art-studio.html" },
-      { label: "Source", url: "https://github.com/grogusmom1989-creator/kikiverse" }
-    ]
-  },
-  {
-    id: "dazzly-fan-edition",
-    title: "Dazzly Fan Edition",
-    kind: "art",
-    collection: "Kikiverse",
-    description: "A bright fan-made experience, also part of Kikiverse.",
-    tags: ["fan-made", "kikiverse"],
-    links: [
-      { label: "Open Dazzly", url: "https://grogusmom1989-creator.github.io/kikiverse/dazzly-fan-edition.html" },
-      { label: "Source", url: "https://github.com/grogusmom1989-creator/kikiverse" }
-    ]
-  },
-  {
-    id: "kiki-uncle-louie-performance",
-    title: "Kiki & Uncle Louie Performance",
-    kind: "video",
-    collection: "Kikiverse",
-    description: "A performance piece already living in the Kikiverse video collection.",
-    tags: ["Kikiverse", "performance"],
-    links: [
-      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/media-generation-kiki-uncle-louie-performance-v-0-55853d62-6dfa-4ff2-8de3-e3ab8df7cb55.mp4" }
-    ]
-  },
-  {
-    id: "cozy-beauty-haul",
-    title: "Cozy Beauty Haul",
-    kind: "video",
-    collection: "Kikiverse",
-    description: "A cozy Sunday beauty haul from the Kikiverse collection.",
-    tags: ["Kikiverse", "beauty", "Sunday"],
-    links: [
-      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/try-it-sunday-cozy-beauty-haul-2026-10-04.mp4" }
-    ]
-  },
-  {
-    id: "burnin-up-remix",
-    title: "Burnin' Up Remix",
-    kind: "video",
-    collection: "Kikiverse",
-    description: "A remix clip already hosted with the other Kikiverse videos.",
-    tags: ["Kikiverse", "remix"],
-    links: [
-      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/videos/burnin-up-remix-2026-10-01.mp4" }
-    ]
-  },
-  {
-    id: "plush-crew-blooper-reel",
-    title: "Plush Crew Blooper Reel",
-    kind: "video",
-    collection: "Kikiverse",
-    description: "A blooper reel from the existing Kikiverse video archive.",
-    tags: ["Kikiverse", "bloopers"],
-    links: [
-      { label: "Play video", url: "https://grogusmom1989-creator.github.io/kikiverse/assets/videos/plush-crew-blooper-reel-2026-10-01.mp4" }
-    ]
-  },
-  {
-    id: "kikiverse-video-archive",
-    title: "The Kikiverse Video Attic",
-    kind: "video",
-    collection: "Kikiverse",
-    description: "The original public asset folder holds 79 clips; browse the rest where they already live.",
-    tags: ["Kikiverse", "archive", "79 clips"],
-    links: [
-      { label: "Browse the video archive", url: "https://github.com/grogusmom1989-creator/kikiverse/tree/main/assets" }
-    ]
-  },
-  {
-    id: "grogu-brick",
-    title: "Grogu Brick",
-    kind: "project",
-    collection: "Grogu",
-    description: "A Grogu-inspired project in the making.",
-    tags: ["Grogu", "experiment"],
-    links: [
-      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Grogu-brick" }
-    ]
-  },
-  {
-    id: "tigger",
-    title: "Tigger",
-    kind: "project",
-    collection: "Tigger",
-    description: "An earlier Tigger project, kept here as part of the bigger picture.",
-    tags: ["Tigger", "archive"],
-    links: [
-      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Tigger" }
-    ]
-  },
-  {
-    id: "tigger-2",
-    title: "Tigger 2.0",
-    kind: "project",
-    collection: "Tigger",
-    description: "A second take in the Tigger family of projects.",
-    tags: ["Tigger", "iteration"],
-    links: [
-      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Tigger-2.0" }
-    ]
-  },
-  {
-    id: "cookies",
-    title: "Cookies",
-    kind: "art",
-    collection: "Art & play",
-    description: "More playful experiments and creative pieces to explore.",
-    tags: ["play", "remix"],
-    links: [
-      { label: "Explore the collection", url: "https://github.com/grogusmom1989-creator/Cookies" }
-    ]
-  },
-  {
-    id: "kikis-world",
-    title: "Kiki's World 2.0",
-    kind: "project",
-    collection: "Kiki's World",
-    description: "A newer world in the collection, growing alongside the rest.",
-    tags: ["world", "iteration"],
-    links: [
-      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/Kikis-world-2.0" }
-    ]
-  },
-  {
-    id: "liam-panda-payne",
-    title: "Liam Panda Payne",
-    kind: "art",
-    collection: "Art & play",
-    description: "A panda-themed creation in the mix.",
-    tags: ["panda", "character"],
-    links: [
-      { label: "Explore the project", url: "https://github.com/grogusmom1989-creator/liam-panda-payne" }
-    ]
-  }
-];
+let projects = [];
 
 const grid = document.querySelector("#shelf-grid");
 const search = document.querySelector("#search");
 const count = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
+const catalogError = document.querySelector("#catalog-error");
 const copyStatus = document.querySelector("#copy-status");
-const filters = [...document.querySelectorAll(".filter")];
+const filters = [...document.querySelectorAll(".filter[data-filter]")];
 const collectionFilters = document.querySelector("#collection-filters");
+const platformFilters = document.querySelector("#platform-filters");
 let activeFilter = "all";
 let activeCollection = "all";
+let activePlatform = "all";
 
 function makeElement(tag, className, text) {
   const element = document.createElement(tag);
   if (className) element.className = className;
   if (text) element.textContent = text;
   return element;
+}
+
+function platformLabel(platform) {
+  const version = platform.versionName ? ` v${platform.versionName}` : "";
+  const api = platform.minSdk
+    ? ` (API ${platform.minSdk}${platform.targetSdk ? `–${platform.targetSdk}` : "+"})`
+    : "";
+  return `${platform.name}${version}${api}`;
 }
 
 function renderCard(project) {
@@ -192,16 +45,31 @@ function renderCard(project) {
   card.append(makeElement("p", "", project.description));
 
   const tags = makeElement("div", "card-tags");
-  for (const tag of project.tags) {
+  for (const tag of project.tags || []) {
     const tagButton = makeElement("button", "card-tag", tag);
     tagButton.type = "button";
     tagButton.addEventListener("click", () => {
       search.value = tag;
       activeFilter = "all";
       activeCollection = "all";
+      activePlatform = "all";
       syncFilters();
       render();
       search.focus();
+    });
+    tags.append(tagButton);
+  }
+  for (const platform of project.platforms || []) {
+    const label = platformLabel(platform);
+    const tagButton = makeElement("button", "card-tag platform-tag", label);
+    tagButton.type = "button";
+    tagButton.addEventListener("click", () => {
+      search.value = "";
+      activeFilter = "all";
+      activeCollection = "all";
+      activePlatform = platform.name;
+      syncFilters();
+      render();
     });
     tags.append(tagButton);
   }
@@ -209,7 +77,7 @@ function renderCard(project) {
 
   const bottom = makeElement("div", "card-bottom");
   const links = makeElement("div", "card-links");
-  for (const item of project.links) {
+  for (const item of project.links || []) {
     const link = makeElement("a", "", item.label);
     link.href = item.url;
     link.target = "_blank";
@@ -248,15 +116,26 @@ function render() {
   const visible = projects.filter((project) => {
     const matchesKind = activeFilter === "all" || project.kind === activeFilter;
     const matchesCollection = activeCollection === "all" || project.collection === activeCollection;
-    const searchable = [project.title, project.description, project.collection, ...project.tags].join(" ").toLocaleLowerCase();
-    return matchesKind && matchesCollection && searchable.includes(query);
+    const matchesPlatform = activePlatform === "all"
+      || (project.platforms || []).some((platform) => platform.name === activePlatform);
+    const platformDetails = (project.platforms || []).map((platform) =>
+      [platform.name, platform.versionName, platform.versionCode, platform.minSdk, platform.targetSdk].join(" ")
+    );
+    const searchable = [
+      project.title,
+      project.description,
+      project.collection,
+      ...(project.tags || []),
+      ...platformDetails
+    ].join(" ").toLocaleLowerCase();
+    return matchesKind && matchesCollection && matchesPlatform && searchable.includes(query);
   });
 
   grid.replaceChildren(...visible.map(renderCard));
   count.textContent = `${visible.length} ${visible.length === 1 ? "piece" : "pieces"} in view`;
   if (visible.length === 0 && activeFilter === "video" && query === "") {
     emptyState.textContent = activeCollection === "all"
-      ? "No videos on this shelf yet. Add a shareable video URL to the projects list in shelf.js."
+      ? "No videos on this shelf yet. Add a shareable video URL to catalog.json."
       : `No videos in ${activeCollection} yet. Clear the collection filter to see every video.`;
   } else {
     emptyState.textContent = "No matches yet. Try another word or filter.";
@@ -270,33 +149,50 @@ function syncFilters() {
     filter.classList.toggle("is-active", selected);
     filter.setAttribute("aria-pressed", String(selected));
   }
-  for (const filter of collectionFilters.querySelectorAll(".filter")) {
-    const selected = filter.dataset.collection === activeCollection;
+  syncFilterGroup(collectionFilters, "collection", activeCollection);
+  syncFilterGroup(platformFilters, "platform", activePlatform);
+}
+
+function syncFilterGroup(container, key, activeValue) {
+  for (const filter of container.querySelectorAll(".filter")) {
+    const selected = filter.dataset[key] === activeValue;
     filter.classList.toggle("is-active", selected);
     filter.setAttribute("aria-pressed", String(selected));
   }
 }
 
-function renderCollectionFilters() {
-  const collections = [...new Set(projects.map((project) => project.collection))].sort();
-  const options = [{ label: "All collections", value: "all" }, ...collections.map((collection) => ({
-    label: collection,
-    value: collection
+function renderFilterGroup(container, key, allLabel, values, activeValue, onSelect) {
+  const options = [{ label: allLabel, value: "all" }, ...values.map((value) => ({
+    label: value,
+    value
   }))];
 
-  collectionFilters.replaceChildren(...options.map((option) => {
+  container.replaceChildren(...options.map((option) => {
     const filter = makeElement("button", "filter", option.label);
     filter.type = "button";
-    filter.dataset.collection = option.value;
-    filter.setAttribute("aria-pressed", String(option.value === activeCollection));
-    if (option.value === activeCollection) filter.classList.add("is-active");
+    filter.dataset[key] = option.value;
+    filter.setAttribute("aria-pressed", String(option.value === activeValue));
+    if (option.value === activeValue) filter.classList.add("is-active");
     filter.addEventListener("click", () => {
-      activeCollection = option.value;
+      onSelect(option.value);
       syncFilters();
       render();
     });
     return filter;
   }));
+}
+
+function renderFilters() {
+  const collections = [...new Set(projects.map((project) => project.collection).filter(Boolean))].sort();
+  const platforms = [...new Set(projects.flatMap((project) =>
+    (project.platforms || []).map((platform) => platform.name)
+  ))].sort();
+  renderFilterGroup(collectionFilters, "collection", "All collections", collections, activeCollection, (value) => {
+    activeCollection = value;
+  });
+  renderFilterGroup(platformFilters, "platform", "All platforms", platforms, activePlatform, (value) => {
+    activePlatform = value;
+  });
 }
 
 for (const filter of filters) {
@@ -308,5 +204,21 @@ for (const filter of filters) {
 }
 
 search.addEventListener("input", render);
-renderCollectionFilters();
-render();
+
+async function loadCatalog() {
+  try {
+    const response = await fetch("catalog.json?v=5");
+    if (!response.ok) throw new Error(`Catalog request failed with status ${response.status}`);
+    const catalog = await response.json();
+    if (!Array.isArray(catalog.items)) throw new TypeError("Catalog is missing its items list");
+    projects = catalog.items;
+    renderFilters();
+    render();
+  } catch (error) {
+    catalogError.hidden = false;
+    catalogError.textContent = "The collection could not load. Refresh the page or open catalog.json directly.";
+    console.error("Could not load the content catalog.", error);
+  }
+}
+
+loadCatalog();
